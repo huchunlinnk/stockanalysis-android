@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_stock_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="600000"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_stock_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="浦发银行"
+                android:textSize="12sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginTop="2dp"/>
+
+            <TextView
+                android:id="@+id/tv_strategy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="综合策略"
+                android:textSize="10sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/tv_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2024-01-01 - 2024-12-31"
+                android:textSize="10sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginTop="2dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/tv_accuracy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="准确率: 75%"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tv_total_return"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收益率: +15%"
+                    android:textSize="12sp"
+                    android:layout_marginStart="12dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/tv_win_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="胜率: 60%"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tv_signal_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10个信号"
+                    android:textSize="12sp"
+                    android:layout_marginStart="12dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_delete"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="删除"/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

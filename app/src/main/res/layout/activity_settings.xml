@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设置"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- AI 配置 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AI 分析配置"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="配置后可使用 AI 进行智能分析"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LLM 提供商"
+        android:textSize="14sp"
+        android:layout_marginTop="12dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerProvider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"/>
+
+    <EditText
+        android:id="@+id/etApiKey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="LLM API Key"
+        android:inputType="text"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/etBaseUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Base URL (可选)"
+        android:inputType="textUri"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/etModel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="模型名称 (可选)"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvProviderHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提示: 选择提供商后将自动填充默认配置"
+        android:textSize="12sp"
+        android:textColor="#999999"
+        android:layout_marginTop="4dp"/>
+
+    <Button
+        android:id="@+id/btnTestLLM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试 LLM 连接"
+        android:layout_marginTop="8dp"
+        style="?attr/materialButtonOutlinedStyle"/>
+
+    <TextView
+        android:id="@+id/tvLLMStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="未配置"
+        android:textSize="14sp"
+        android:textColor="#999999"
+        android:layout_marginTop="4dp"/>
+
+    <!-- 数据源配置 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="数据源配置"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="配置多个数据源，支持故障自动切换"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginTop="4dp"/>
+
+    <Button
+        android:id="@+id/btnDataSourceConfig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="管理数据源（7个可用）"
+        android:layout_marginTop="8dp"
+        style="?attr/materialButtonOutlinedStyle"/>
+
+    <TextView
+        android:id="@+id/tvDataSourceStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已启用: 3 个 | 健康: 3 个"
+        android:textSize="13sp"
+        android:textColor="#666666"
+        android:layout_marginTop="4dp"/>
+
+    <!-- 快速 Tushare 配置 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tushare 快速配置"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"/>
+
+    <EditText
+        android:id="@+id/etTushareToken"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tushare Token (可选)"
+        android:inputType="text"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvTushareHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="访问 https://tushare.pro 注册获取免费 Token"
+        android:textSize="12sp"
+        android:textColor="#999999"
+        android:autoLink="web"
+        android:layout_marginTop="4dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/btnTestTushare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="测试连接"
+            android:layout_marginEnd="8dp"
+            style="?attr/materialButtonOutlinedStyle"/>
+
+        <TextView
+            android:id="@+id/tvTushareStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="未配置"
+            android:textColor="#999999"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"/>
+    </LinearLayout>
+
+    <!-- 智能导入设置 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="智能导入设置"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用图片识别、CSV导入等智能功能快速录入持仓数据"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginTop="4dp"/>
+
+    <Button
+        android:id="@+id/btnImportSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="导入设置"
+        android:layout_marginTop="8dp"
+        style="?attr/materialButtonOutlinedStyle"/>
+
+    <!-- 配置说明 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="配置说明"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="• LLM API Key: 用于智能分析和舆情分析\n• Tushare Token: 用于获取真实财务数据\n• 数据将安全存储在本地，仅用于分析"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- 保存按钮 -->
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存设置"
+        android:layout_marginTop="24dp"/>
+
+</LinearLayout>
+
+</ScrollView>
