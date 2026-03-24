@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 添加到 activity_settings.xml 底部，用于测试崩溃报告 -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 调试选项 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="调试选项"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="仅用于开发调试，生产版本将隐藏"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginTop="4dp"/>
+
+    <Button
+        android:id="@+id/btnTestCrash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试崩溃报告 (Test Crash)"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#F44336"
+        style="?attr/materialButtonOutlinedStyle"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⚠️ 点击此按钮将触发测试崩溃，用于验证崩溃报告是否正常工作"
+        android:textSize="12sp"
+        android:textColor="#F44336"
+        android:layout_marginTop="4dp"/>
+
+</LinearLayout>

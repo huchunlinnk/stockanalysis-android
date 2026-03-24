@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="6dp"
+    app:cardBackgroundColor="@color/background_card"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/divider">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- 左侧：股票信息 -->
+        <LinearLayout
+            android:id="@+id/llStockInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/llPriceInfo"
+            android:layout_marginEnd="12dp">
+
+            <TextView
+                android:id="@+id/tvStockName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="贵州茅台"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"/>
+
+            <TextView
+                android:id="@+id/tvStockSymbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="600519"
+                android:textSize="12sp"
+                android:textColor="@color/text_tertiary"
+                android:layout_marginTop="4dp"/>
+
+            <!-- 市场标签 -->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipMarket"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="A股"
+                android:textSize="10sp"
+                app:chipBackgroundColor="@color/primary_50"
+                app:chipStrokeWidth="0dp"
+                android:textColor="@color/primary_light"
+                android:layout_marginTop="6dp"/>
+        </LinearLayout>
+
+        <!-- 中间：价格信息 -->
+        <LinearLayout
+            android:id="@+id/llPriceInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            app:layout_constraintStart_toEndOf="@id/llStockInfo"
+            app:layout_constraintEnd_toStartOf="@id/llChangeInfo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1,725.00"
+                android:textSize="20sp"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"/>
+
+            <TextView
+                android:id="@+id/tvVolume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="量能: 正常"
+                android:textSize="11sp"
+                android:textColor="@color/text_tertiary"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- 右侧：涨跌信息 -->
+        <LinearLayout
+            android:id="@+id/llChangeInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            app:layout_constraintStart_toEndOf="@id/llPriceInfo"
+            app:layout_constraintEnd_toStartOf="@id/btnAnalyze"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginHorizontal="12dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvChange"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                app:cardBackgroundColor="@color/stock_up"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:id="@+id/tvChange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+2.35%"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_on_primary"
+                    android:textStyle="bold"
+                    android:paddingHorizontal="12dp"
+                    android:layout_gravity="center"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tvUpdateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15:00"
+                android:textSize="10sp"
+                android:textColor="@color/text_tertiary"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- 分析按钮 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAnalyze"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="AI分析"
+            android:textSize="12sp"
+            android:textColor="@color/text_on_primary"
+            app:cornerRadius="10dp"
+            app:backgroundTint="@color/gradient_start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:elevation="2dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
