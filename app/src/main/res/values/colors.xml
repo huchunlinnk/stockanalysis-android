@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 科技感深色主题配色 -->
+    
+    <!-- 主色调 - 深蓝紫色系 -->
+    <color name="primary">#6366F1</color>
+    <color name="primary_dark">#4F46E5</color>
+    <color name="primary_light">#818CF8</color>
+    <color name="primary_50">#EEF2FF</color>
+    <color name="primary_100">#E0E7FF</color>
+    <color name="primary_200">#C7D2FE</color>
+    
+    <!-- 强调色 - 青色/霓虹蓝 -->
+    <color name="accent">#06B6D4</color>
+    <color name="accent_light">#22D3EE</color>
+    <color name="accent_dark">#0891B2</color>
+    
+    <!-- 股票涨跌色 -->
+    <color name="stock_up">#10B981</color>
+    <color name="stock_up_light">#34D399</color>
+    <color name="stock_up_dark">#059669</color>
+    <color name="stock_down">#EF4444</color>
+    <color name="stock_down_light">#F87171</color>
+    <color name="stock_down_dark">#DC2626</color>
+    <color name="stock_flat">#9CA3AF</color>
+    
+    <!-- 背景色 - 深色科技感 -->
+    <color name="background">#0F172A</color>
+    <color name="background_dark">#020617</color>
+    <color name="background_light">#334155</color>
+    <color name="background_card">#1E293B</color>
+    <color name="background_elevated">#334155</color>
+    <color name="surface">#1E293B</color>
+    <color name="surface_variant">#334155</color>
+    
+    <!-- 文字颜色 -->
+    <color name="text_primary">#F1F5F9</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_tertiary">#64748B</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    <color name="text_on_accent">#FFFFFF</color>
+    
+    <!-- 分隔线 -->
+    <color name="divider">#334155</color>
+    <color name="divider_light">#475569</color>
+    
+    <!-- 状态颜色 -->
+    <color name="success">#10B981</color>
+    <color name="success_light">#D1FAE5</color>
+    <color name="warning">#F59E0B</color>
+    <color name="error">#EF4444</color>
+    <color name="info">#3B82F6</color>
+    
+    <!-- 渐变色彩 -->
+    <color name="gradient_start">#6366F1</color>
+    <color name="gradient_end">#06B6D4</color>
+    <color name="gradient_accent_start">#8B5CF6</color>
+    <color name="gradient_accent_end">#06B6D4</color>
+    
+    <!-- 霓虹发光效果 -->
+    <color name="neon_blue">#00F0FF</color>
+    <color name="neon_purple">#B829F7</color>
+    <color name="neon_green">#00FF88</color>
+    <color name="neon_red">#FF3366</color>
+    
+    <!-- 分析结果颜色 -->
+    <color name="decision_strong_buy">#10B981</color>
+    <color name="decision_buy">#34D399</color>
+    <color name="decision_hold">#F59E0B</color>
+    <color name="decision_sell">#F87171</color>
+    <color name="decision_strong_sell">#EF4444</color>
+    
+    <!-- 置信度颜色 -->
+    <color name="confidence_high">#10B981</color>
+    <color name="confidence_medium">#F59E0B</color>
+    <color name="confidence_low">#EF4444</color>
+    
+    <!-- 图表颜色 -->
+    <color name="chart_line">#6366F1</color>
+    <color name="chart_line_secondary">#06B6D4</color>
+    <color name="chart_fill_start">#6366F1</color>
+    <color name="chart_fill_end">#006366F1</color>
+    <color name="chart_grid">#334155</color>
+    <color name="chart_label">#94A3B8</color>
+    
+    <!-- 遮罩 -->
+    <color name="scrim">#CC000000</color>
+    <color name="ripple">#33FFFFFF</color>
+    
+    <!-- 基础颜色 -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    
+    <!-- 趋势颜色别名 -->
+    <color name="trend_up">@color/stock_up</color>
+    <color name="trend_down">@color/stock_down</color>
+    <color name="purple_500">#8B5CF6</color>
+    
+    <!-- 灰度色板 -->
+    <color name="gray_400">#9CA3AF</color>
+    <color name="gray_500">#6B7280</color>
+    
+    <!-- 绿色色板 -->
+    <color name="green_100">#D1FAE5</color>
+    <color name="green_500">#10B981</color>
+    <color name="green_800">#065F46</color>
+    
+    <!-- 橙色色板 -->
+    <color name="orange_100">#FEF3C7</color>
+    <color name="orange_500">#F59E0B</color>
+    <color name="orange_800">#92400E</color>
+    
+    <!-- 红色色板 -->
+    <color name="red_100">#FEE2E2</color>
+    <color name="red_500">#EF4444</color>
+    <color name="red_800">#991B1B</color>
+    
+    <!-- 选中项背景色 -->
+    <color name="selected_item_background">#E0E7FF</color>
+    <color name="primary_color">@color/primary</color>
+    
+    <!-- 风险提示专用颜色 -->
+    <color name="risk_warning_text">#FF4444</color>
+    <color name="risk_warning_background">#33FF4444</color>
+</resources>

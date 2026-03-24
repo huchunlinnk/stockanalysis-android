@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_home">
+
+    <!-- 首页 -->
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.stockanalysis.ui.HomeFragment"
+        android:label="@string/nav_home"
+        tools:layout="@layout/fragment_home">
+        
+        <action
+            android:id="@+id/action_home_to_stock_detail"
+            app:destination="@id/stockDetailActivity" />
+            
+        <action
+            android:id="@+id/action_home_to_watchlist"
+            app:destination="@id/nav_watchlist" />
+            
+        <action
+            android:id="@+id/action_home_to_history"
+            app:destination="@id/nav_history" />
+    </fragment>
+
+    <!-- 自选股 -->
+    <fragment
+        android:id="@+id/nav_watchlist"
+        android:name="com.example.stockanalysis.ui.WatchlistFragment"
+        android:label="@string/nav_watchlist"
+        tools:layout="@layout/fragment_watchlist">
+        
+        <action
+            android:id="@+id/action_watchlist_to_stock_detail"
+            app:destination="@id/stockDetailActivity" />
+            
+        <action
+            android:id="@+id/action_watchlist_to_analysis_result"
+            app:destination="@id/analysisResultActivity" />
+    </fragment>
+
+    <!-- 分析 -->
+    <fragment
+        android:id="@+id/nav_analysis"
+        android:name="com.example.stockanalysis.ui.AnalysisFragment"
+        android:label="@string/nav_analysis"
+        tools:layout="@layout/fragment_analysis">
+        
+        <action
+            android:id="@+id/action_analysis_to_result"
+            app:destination="@id/analysisResultActivity" />
+    </fragment>
+
+    <!-- 历史 -->
+    <fragment
+        android:id="@+id/nav_history"
+        android:name="com.example.stockanalysis.ui.HistoryFragment"
+        android:label="@string/nav_history"
+        tools:layout="@layout/fragment_history">
+        
+        <action
+            android:id="@+id/action_history_to_analysis_result"
+            app:destination="@id/analysisResultActivity" />
+            
+        <action
+            android:id="@+id/action_history_to_comparison"
+            app:destination="@id/nav_history_comparison" />
+    </fragment>
+
+    <!-- 历史信号对比 -->
+    <fragment
+        android:id="@+id/nav_history_comparison"
+        android:name="com.example.stockanalysis.ui.HistoryComparisonFragment"
+        android:label="@string/nav_history_comparison"
+        tools:layout="@layout/fragment_history_comparison" />
+
+    <!-- 持仓管理 -->
+    <fragment
+        android:id="@+id/nav_portfolio"
+        android:name="com.example.stockanalysis.ui.PortfolioFragment"
+        android:label="持仓管理"
+        tools:layout="@layout/fragment_portfolio">
+
+        <action
+            android:id="@+id/action_portfolio_to_stock_detail"
+            app:destination="@id/stockDetailActivity" />
+    </fragment>
+
+    <!-- 策略回测 -->
+    <fragment
+        android:id="@+id/nav_backtest"
+        android:name="com.example.stockanalysis.ui.BacktestFragment"
+        android:label="策略回测"
+        tools:layout="@layout/fragment_backtest" />
+
+    <!-- 股票详情 Activity -->
+    <activity
+        android:id="@+id/stockDetailActivity"
+        android:name="com.example.stockanalysis.ui.StockDetailActivity"
+        android:label="@string/stock_detail_title"
+        tools:layout="@layout/activity_stock_detail">
+        
+        <argument
+            android:name="stock_symbol"
+            app:argType="string" />
+        
+        <argument
+            android:name="stock_name"
+            app:argType="string"
+            app:nullable="true" />
+    </activity>
+
+    <!-- 分析结果 Activity -->
+    <activity
+        android:id="@+id/analysisResultActivity"
+        android:name="com.example.stockanalysis.ui.AnalysisResultActivity"
+        android:label="@string/analysis_result_title"
+        tools:layout="@layout/activity_analysis_result">
+        
+        <argument
+            android:name="analysis_id"
+            app:argType="string" />
+    </activity>
+
+</navigation>
