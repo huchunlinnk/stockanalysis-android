@@ -136,3 +136,15 @@ lint/tmp/
 
 # app/build folder
 app/build/
+
+# Android project documentation files (not needed for release)
+android/*.md
+android/StockAnalysisApp/*.md
+
+# Release APK files (only keep release notes)
+releases/**/*.apk
+releases/**/output-metadata.json
+
+# Firebase/Google Services (keep template only)
+# google-services.json is a template with fake data, kept in repo
+# real google-services.json should be ignored
